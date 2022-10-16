@@ -34,3 +34,28 @@ int main(void)
 
 
 int compute_score(string word)
+{
+    // TODO: Compute and return score for string
+    int score = 0;
+ //   int score1 = 0;
+ //   int score2 = 0;
+    int len = strlen(word);
+
+    for(int i = 0; i < len; i++)
+    {
+        if(isupper(word[i]))
+        {
+            score += POINTS[word[i] - 'A'];
+            //score = score + POINTS[i];
+           // printf("%i", score);
+        }
+        else if(islower(word[i]))
+        {
+            score += POINTS[word[i] - 'a'];
+           // score = score + POINTS[i];
+            //printf("%i", score);
+        }
+        //score = score1 + score2;
+    }
+    return score;
+}
